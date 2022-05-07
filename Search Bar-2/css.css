@@ -1,0 +1,56 @@
+body {
+    background-image: url(img/cake.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+* {
+    /* padding ve margin 0 lar*/
+    box-sizing: border-box;
+}
+
+.search {
+    background-color: red;
+    position: relative;
+}
+
+.input {
+    background-color: white;
+    border: 0;
+    width: 50px;
+    height: 50px;
+    transition: width 2s ease;
+}
+
+.btn {
+    background-color: white;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    height: 50px;
+    left: 0;
+    width: 50px;
+    transition: transform 2s ease;
+}
+
+.btn:focus,
+.input:focus {
+    outline: none;
+}
+
+.search.active .input {
+    width: 200px;
+}
+
+.search.active .btn {
+    transform: translateX(198px);
+}
